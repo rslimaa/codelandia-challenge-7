@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  background-image: url("./img/background.png");
+  background-color: black;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+header {
+  width: 100%;
+  padding: 32px 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #ffffff;
+}
+
+.riot {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+a:hover {
+  opacity: 50%;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 80vh;
+  padding-top: 80px;
+}
+
+.container-heroes {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  padding: 0 10%;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 64px;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 0.1rem #ffffff;
+}
+
+.card-hero {
+  display: flex;
+  flex-direction: column;
+  margin-right: 200px;
+  position: relative;
+}
+
+.img-hero {
+  position: absolute;
+  z-index: 1;
+  background: linear-gradient(to bottom right, transparent 4.3%, #ff4656 0);
+}
+
+.borderimg {
+  position: absolute;
+  z-index: 2;
+}
+
+.border {
+  position: absolute;
+  margin-top: -8px;
+  margin-left: -8px;
+  z-index: 0;
+}
+
+.name-hero {
+  color: #ff4656;
+  margin-top: 180px;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.heroes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.phoenix {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+
+.phoenix img {
+  width: 60%;
+}
+
+footer {
+  padding: 32px 10%;
+  position: fixed;
+  bottom: 0;
+}
+
+.nav-footer {
+  display: flex;
+  justify-content: space-around;
+  width: 150px;
+}
+
+@media (max-width: 1280px) {
+  .heroes {
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 540px) {
+  .phoenix {
+    display: none;
+  }
+  .heroes {
+    grid-template-columns: 1fr;
+    align-items: center;
+    padding-bottom: 0px;
+    padding-left: 80px;
+  }
+
+  .container-heroes {
+    align-items: center;
+    width: 100%;
+  }
+
+  footer {
+    position: static;
+    margin-top: 10px;
+  }
+
+  .nav-footer {
+    align-items: center;
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 32px;
+    margin-bottom: 25px;
+    text-align: center;
+    width: 100%;
+  }
+}
